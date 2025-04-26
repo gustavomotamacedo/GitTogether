@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.List;
+
 @Entity
 @Table(name = "tb_users")
 @Getter
@@ -26,7 +28,15 @@ public class UserEntity {
     @Column(name = "password")
     private String password;
 
-    @Column(name = "uf_id")
-    private Integer ufId;
+    @OneToOne
+    private UfEntity uf;
+
+    @ManyToMany
+    @JoinTable(
+            name = "tb_user_interests",
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "interest_id")
+    )
+    private List<InterestEntity> interests;
 
 }
