@@ -1,9 +1,13 @@
 package br.com.gustavomacedo.git_together.entities;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
 @Table(name = "tb_users")
+@Getter
+@Setter
 public class UserEntity {
 
     @Id
