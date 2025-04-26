@@ -6,6 +6,7 @@ import br.com.gustavomacedo.git_together.repositories.InterestRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class InterestService {
@@ -21,6 +22,10 @@ public class InterestService {
         return interest.stream().map(InterestDto::toDTO).toList();
     }
 
-    
+    public InterestDto getInterestById(int id) {
+        Optional<InterestEntity> entityOptional = interestRepository.findById(id);
+        InterestEntity entity = entityOptional.get();
+        return InterestDto.toDTO(entity);
+    }
 
 }
