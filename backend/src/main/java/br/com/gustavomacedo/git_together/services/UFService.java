@@ -17,8 +17,9 @@ public class UFService {
         this.ufRepository = ufRepository;
     }
 
-    public List<UFEntity> getAllUfs() {
-        return ufRepository.findAll();
+    public List<UFDto> getAllUfs() {
+        List<UFEntity> ufEntities = ufRepository.findAll();
+        return ufEntities.stream().map(UFDto::toDTO).toList();
     }
 
     public UFDto getUfByUF(String uf) {

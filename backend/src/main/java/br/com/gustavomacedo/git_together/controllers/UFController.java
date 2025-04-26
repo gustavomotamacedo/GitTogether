@@ -16,7 +16,7 @@ public class UFController {
     private UFService ufService;
 
     @GetMapping
-    public List<UFEntity> getAllUfs() {
+    public List<UFDto> getAllUfs() {
         return ufService.getAllUfs();
     }
 
