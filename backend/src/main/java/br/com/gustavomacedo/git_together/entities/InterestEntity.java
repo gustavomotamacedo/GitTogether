@@ -14,7 +14,9 @@ public class InterestEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Getter
     private Integer id;
+    @Getter
     private String name;
 
     @ManyToMany
@@ -23,6 +25,7 @@ public class InterestEntity {
             joinColumns = @JoinColumn(name = "interest_id"),
             inverseJoinColumns = @JoinColumn(name = "user_id")
     )
+    @Getter
     private List<UserEntity> users;
 
 }
