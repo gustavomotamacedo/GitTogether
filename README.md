@@ -1,2 +1,2 @@
 # GitTogether
-# GitTogether - Um sistema de matchmaking para desenvolvedores
+> Um sistema de matchmaking para desenvolvedores
