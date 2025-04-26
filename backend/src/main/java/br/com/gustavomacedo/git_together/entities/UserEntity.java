@@ -29,7 +29,7 @@ public class UserEntity {
     private String password;
 
     @OneToOne
-    private UfEntity uf;
+    private UFEntity uf;
 
     @ManyToMany
     @JoinTable(

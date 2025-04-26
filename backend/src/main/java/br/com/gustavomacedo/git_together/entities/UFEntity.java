@@ -8,7 +8,7 @@ import lombok.Setter;
 @Table(name = "tb_ufs")
 @Getter
 @Setter
-public class UfEntity {
+public class UFEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
