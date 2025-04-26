@@ -1,6 +1,6 @@
 package br.com.gustavomacedo.git_together.DTOs;
 
-import br.com.gustavomacedo.git_together.entities.UFEntity;
+import br.com.gustavomacedo.git_together.entities.InterestEntity;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -8,17 +8,13 @@ import lombok.Setter;
 
 @NoArgsConstructor
 @AllArgsConstructor
-public class UFDto {
-
-    @Getter
-    @Setter
-    private String uf;
+public class InterestDto {
 
     @Getter
     @Setter
     private String name;
 
-    public static UFDto toDTO(UFEntity ufEntity) {
-        return new UFDto(ufEntity.getUf(), ufEntity.getName());
+    public static InterestDto toDTO(InterestEntity interestEntity) {
+        return new InterestDto(interestEntity.getName());
     }
 }
