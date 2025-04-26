@@ -4,18 +4,14 @@ import br.com.gustavomacedo.git_together.entities.UFEntity;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 @NoArgsConstructor
 @AllArgsConstructor
+@Getter
 public class UFDto {
 
-    @Getter
-    @Setter
     private String uf;
 
-    @Getter
-    @Setter
     private String name;
 
     public static UFDto toDTO(UFEntity ufEntity) {

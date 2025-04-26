@@ -1,17 +1,13 @@
 package br.com.gustavomacedo.git_together.DTOs;
 
 import br.com.gustavomacedo.git_together.entities.InterestEntity;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 @NoArgsConstructor
 @AllArgsConstructor
+@Getter
 public class InterestDto {
 
-    @Getter
-    @Setter
     private String name;
 
     public static InterestDto toDTO(InterestEntity interestEntity) {
