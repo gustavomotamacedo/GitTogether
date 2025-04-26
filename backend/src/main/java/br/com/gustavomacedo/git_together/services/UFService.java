@@ -20,4 +20,8 @@ public class UFService {
         return ufRepository.findAll();
     }
 
+    public UFEntity getUfByUF(String uf) {
+        return ufRepository.findByUf(uf);
+    }
+
 }

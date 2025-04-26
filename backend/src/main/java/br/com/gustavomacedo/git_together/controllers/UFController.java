@@ -3,9 +3,7 @@ package br.com.gustavomacedo.git_together.controllers;
 import br.com.gustavomacedo.git_together.entities.UFEntity;
 import br.com.gustavomacedo.git_together.services.UFService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -19,6 +17,11 @@ public class UFController {
     @GetMapping
     public List<UFEntity> getAllUfs() {
         return ufService.getAllUfs();
+    }
+
+    @GetMapping("/{uf}")
+    public UFEntity getByUf(@PathVariable("uf") String uf) {
+        return ufService.getUfByUF(uf.toUpperCase());
     }
 
 }
