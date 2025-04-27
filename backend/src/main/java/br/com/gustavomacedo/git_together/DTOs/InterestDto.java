@@ -5,10 +5,7 @@ import lombok.*;
 
 @NoArgsConstructor
 @AllArgsConstructor
-@Getter
-public class InterestDto {
-
-    private String name;
+public record InterestDto(String name) {
 
     public static InterestDto toDTO(InterestEntity interestEntity) {
         return new InterestDto(interestEntity.getName());
