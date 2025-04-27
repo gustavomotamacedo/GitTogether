@@ -7,14 +7,11 @@ import lombok.NoArgsConstructor;
 
 @NoArgsConstructor
 @AllArgsConstructor
-@Getter
-public class UFDto {
-
-    private String uf;
-
-    private String name;
+public record UFDto(String uf,
+                    String name) {
 
     public static UFDto toDTO(UFEntity ufEntity) {
         return new UFDto(ufEntity.getUf(), ufEntity.getName());
     }
+
 }
