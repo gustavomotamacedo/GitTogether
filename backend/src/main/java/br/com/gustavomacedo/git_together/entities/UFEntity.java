@@ -7,6 +7,7 @@ import lombok.Setter;
 @Entity
 @Table(name = "tb_ufs")
 @Getter
+@Setter
 public class UFEntity {
 
     @Id
